@@ -8,15 +8,110 @@ body {
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
-    background-color: aquamarine;
+    background-color: #292c96;
+    color: #FFF;
+    padding: 0 20px;
 }
 
 .contenedor {
     max-width: 100%;
-    width: 100%;
+    width: 1320px;
     height: 80%;
+}
+
+h1 {
+    text-align: center;
 }
 
 .la-app {
     margin: 20px 0;
+}
+
+.input-boton {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    width: 100%;
+    border: none;
+    transition: all .3s ease-in;
+    padding: 20px;
+    background-color: #0f1155;
+    color: #FFF;
+    outline: none;
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+    background-color: #0f1155;
+    outline: crimson solid;
+}
+
+
+button {
+    background-color: #ac3f3f;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    width: 150px;
+    cursor: pointer;
+    color: #FFF;
+}
+
+.lista-items {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 10px;
+    color :#FFF;
+    background-color: #141881;
+    position: relative;
+}
+
+.item .fa-trash{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+/* responsive contenedores */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .contenedor {
+        width: 600px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .contenedor {
+        width: 800px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .contenedor {
+        max-width: 100%;
+        width: 1200px;
+    }
 }
