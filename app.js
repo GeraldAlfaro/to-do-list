@@ -18,3 +18,16 @@ lista.addEventListener('click', function(event) {
         event.target.parentNode.remove();
     }
 })
+
+const buscador = () => {
+    const input = document.getElementById('buscador')
+    const filtrador = input.value.toUpperCase();
+
+    const lista = document.querySelectorAll('#lista-tareas li')
+    lista.forEach((el) => {
+        const texto = el.textContent.toUpperCase();
+        el.style.display = texto.includes(filtrador) ? "" : "none";
+    });
+};
+
+document.getElementById('buscador').addEventListener('input', buscador);
